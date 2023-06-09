@@ -5,6 +5,7 @@ import {
     Route
 } from "react-router-dom";
 import Login from './Pages/login';
+import Register from './Pages/register'
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 
 const theme = createTheme({
@@ -17,7 +18,7 @@ const theme = createTheme({
             main: '#4b4173',
         },
         error: {
-            main: '#F79824',
+            main: '#e63946',
         },
     },
     typography: {
@@ -32,6 +33,7 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={<Login/>}/>
+                    <Route path="/register" element={<Register/>}/>
                 </Routes>
             </Router>
         </ThemeProvider>
