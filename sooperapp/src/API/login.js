@@ -6,7 +6,7 @@ export function login(username, password) {
 }
 
 export function register(username, password) {
-    if (username == "" || password == "") {
+    if (username === "" || password === "") {
         return 400;
     }
     let userSecret = username + ":" + password;
@@ -25,5 +25,5 @@ function generateData() {
         let rand = Math.floor(Math.random() * 1000)
         userData.push(data[rand])
     }
-    return userData;
+    return JSON.stringify(userData);
 }
